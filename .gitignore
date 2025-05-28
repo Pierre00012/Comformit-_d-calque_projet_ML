@@ -1,0 +1,11 @@
+# Ignorer le dossier de l'environnement virtuel
+.venv/
+# Ignorer le dossier contenant des fichiers de données
+data/
+dataset_binarized/
+roi_images/
+__pycache__/
+# ignorer les fichiers csv 
+*.csv
+
+
