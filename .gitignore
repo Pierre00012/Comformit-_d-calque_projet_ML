@@ -4,6 +4,8 @@
 data/
 dataset_binarized/
 roi_images/
+dataset/
+extracted_rois/
 __pycache__/
 # ignorer les fichiers csv 
 *.csv

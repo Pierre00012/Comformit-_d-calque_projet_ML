@@ -8,7 +8,7 @@ Ouvrir le terminal
 ##  Installation
 
 Ouvrir le terminal 
-1. Cloner le dépôt `git clone https://github.com/Pierre00012/Conformit-d-calque.git`
+1. Cloner le dépôt `git clone https://github.com/Pierre00012/Comformit-_d-calque_projet_ML`
 2. Se placer dans le dossier du projet: `cd Conformit-d-calque`
 3. Installer l'environnement virtuel Python (3.10.x): `python -m .venv .`
 4. Activer l'environnement virtuel Python: `source bin/activate`
