@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Résultats des prédictions</title>
+    <style>
+        body { font-family: Arial; background: #f0f0f0; padding: 20px; }
+        .card { background: white; padding: 10px; margin: 10px; display: inline-block; border-radius: 8px; box-shadow: 0 0 5px rgba(0,0,0,0.1); width: 150px; text-align: center; }
+        img { max-width: 100%; border-radius: 4px; }
+        .label { font-weight: bold; margin-top: 5px; }
+    </style>
+</head>
+<body>
+    <h2>Résultats des prédictions</h2>
+    {% for item in results %}
+    <div class="card">
+        <img src="/uploads/extracted_rois/{{ item.image }}" alt="ROI">
+        <div class="label">{{ item.label }}</div>
+        <div>{{ item.confidence }}%</div>
+    </div>
+    {% endfor %}
+    <div style="margin-top: 20px;">
+      <a href="/download" style="text-decoration: none;">
+          <button style="padding: 10px 20px; background-color: #2ecc71; color: white; border: none; border-radius: 5px;">
+              📄 Télécharger le rapport PDF
+          </button>
+      </a>
+    </div>
+    <div style="margin-top: 30px;">
+      <a href="/" style="text-decoration: none;">
+          <button style="padding: 10px 20px; background-color: #3498db; color: white; border: none; border-radius: 5px;">↩ Retour</button>
+      </a>
+    </div>
+
+</body>
+</html>

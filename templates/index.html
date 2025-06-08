@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test du modèle</title>
+    <!-- Lien vers Bootstrap CSS via CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+    <style>
+        body { background-color: #f8f9fa; }
+        .project-description { margin-bottom: 20px; color: #333; font-size: 1.1em; }
+        .alert-warning { margin-top: 20px; display: none; }
+        .carousel-inner { text-align: center; }
+        .carousel-item img { max-height: 300px; object-fit: cover; margin: 0 auto; }
+        .carousel-caption { position: relative; text-align: center; padding: 15px 0; color: #333; }
+        .carousel-control-prev, .carousel-control-next {
+            position: relative;
+            top: auto;
+            transform: none;
+            margin-top: 10px;
+            color: #000;
+            background-color: #000;
+            border: none;
+            border-radius: 50%;
+            width: 40px;
+            height: 40px;
+            opacity: 0.8;
+        }
+        .carousel-control-prev:hover, .carousel-control-next:hover {
+            opacity: 1;
+        }
+        .carousel-control-prev-icon, .carousel-control-next-icon {
+            filter: invert(1); /* Inverse les couleurs pour rendre les icônes blanches sur fond noir */
+        }
+    </style>
+
+</head>
+<body>
+    <div class="container ">
+      <h2 class="text-center mb-4">POC - Détection de Décollement, Couleur Non Conforme ou Chiffre Manquant</h2>
+      <p class="project-description">
+            Cette preuve de concept utilise un modèle d'apprentissage automatique pour analyser des images binarisées et détecter des défauts potentiels : décollements non conformes, couleurs non conformes ou chiffres manquants. Téléchargez une image pour tester le système et obtenir un rapport sur les anomalies détectées.
+      </p>
+
+
+      <div id="defectCarousel" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-indicators">
+                <button type="button" data-bs-target="#defectCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                <button type="button" data-bs-target="#defectCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                <button type="button" data-bs-target="#defectCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                <button type="button" data-bs-target="#defectCarousel" data-bs-slide-to="3" aria-label="Slide 4"></button>
+            </div>
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img src="static/dxf_clean_grand.png" class="d-block" alt="Décollement Non Conforme">
+                    <div class="carousel-caption">
+                        <h5>Décollement Non Conforme</h5>
+                        <p>Détection des zones où le décollement dépasse les normes acceptées.</p>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img src="static/30mm_BonW_3.jpg" class="d-block" alt="Couleur Non Conforme">
+                    <div class="carousel-caption">
+                        <h5>Couleur Non Conforme</h5>
+                        <p>Identification des variations de couleur non conformes aux standards.</p>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img src="static/non_conforme.jpg" class="d-block" alt="Chiffre Manquant">
+                    <div class="carousel-caption">
+                        <h5>Chiffre Manquant</h5>
+                        <p>Vérification de l'absence ou de la mauvaise lisibilité des chiffres.</p>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img src="static/conforme.jpg" class="d-block" alt="Analyse Globale">
+                    <div class="carousel-caption">
+                        <h5>Analyse Globale</h5>
+                        <p>Synthèse des résultats pour une évaluation complète de l'image.</p>
+                    </div>
+                </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#defectCarousel" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Précédent</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#defectCarousel" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Suivant</span>
+            </button>
+        </div>
+
+      
+
+      
+
+
+      
+   
+      <div >
+          <h2 >Test de la conformintée de l'image du décalque</h2>
+          <p class="project-description">
+              Ce projet vise à développer un système de détection et d'analyse des chiffres sur des images binarisées. Utilisant un modèle d'apprentissage automatique entraîné sur des régions d'intérêt (ROI) extraites, cette application permet d'identifier et de classer les chiffres avec précision. Idéal pour l'automatisation de tâches de reconnaissance de données visuelles !
+          </p>
+          <form action="/predict" method="post" enctype="multipart/form-data" class="text-center">
+              <div class="mb-3">
+                  <label for="image" class="form-label">Uploader une image à tester </label>
+                  <input type="file" class="form-control" id="image" name="image" required>
+              </div>
+              <button type="submit" class="btn btn-primary">Analyser</button>
+          </form>
+      </div>
+        
+    </div>
+
+    <!-- Lien vers Bootstrap JS et Popper.js (facultatif, mais utile pour certains composants) -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
+</body>
+</html>
