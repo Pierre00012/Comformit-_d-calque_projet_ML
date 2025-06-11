@@ -2,7 +2,7 @@
 <html lang="fr">
 <head>
     <meta charset="UTF-8">
-    <title>Résultats des prédictions</title>
+    <title>Résultats des prédictions  </title>
     <style>
         body { font-family: Arial; background: #f0f0f0; padding: 20px; }
         .card { background: white; padding: 10px; margin: 10px; display: inline-block; border-radius: 8px; box-shadow: 0 0 5px rgba(0,0,0,0.1); width: 150px; text-align: center; }
@@ -11,12 +11,17 @@
     </style>
 </head>
 <body>
-    <h2>Résultats des prédictions</h2>
+    <div style="text-align: center; margin-top: 30px;">
+        <h2>Résultats des prédictions sur l'image :</h2>
+        <img src="{{ url_for('upload_file', filename=input_image) }}" alt="Image analysée" style="max-width: 400px; display: block; margin: 0 auto;">
+    </div>
+
     {% for item in results %}
     <div class="card">
-        <img src="/uploads/extracted_rois/{{ item.image }}" alt="ROI">
+        <img src="http://localhost:5000/uploads/extracted_rois/{{ item.image }}" alt="ROI">
         <div class="label">{{ item.label }}</div>
         <div>{{ item.confidence }}%</div>
+        
     </div>
     {% endfor %}
     <div style="margin-top: 20px;">
@@ -31,6 +36,6 @@
           <button style="padding: 10px 20px; background-color: #3498db; color: white; border: none; border-radius: 5px;">↩ Retour</button>
       </a>
     </div>
-
+     
 </body>
 </html>

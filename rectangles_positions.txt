@@ -1,0 +1,78 @@
+POSITIONS DES RECTANGLES DÉTECTÉS
+==================================================
+Image: 30mm_BonW_7.jpg
+Nombre total de rectangles: 31
+Date: 2025-06-10 12:49:48
+==================================================
+
+FORMAT DÉTAILLÉ:
+--------------------
+Rectangle  1: x=2060, y=3366, largeur=248, hauteur=355
+Rectangle  2: x=2358, y=3344, largeur=259, hauteur=315
+Rectangle  3: x=2617, y=3282, largeur=265, hauteur=309
+Rectangle  4: x=2820, y=3152, largeur=304, hauteur=265
+Rectangle  5: x=2967, y=2944, largeur=343, hauteur=287
+Rectangle  6: x=3220, y=2679, largeur=298, hauteur=316
+Rectangle  7: x=3316, y=2409, largeur=292, hauteur=327
+Rectangle  8: x=3361, y=2184, largeur=337, hauteur=225
+Rectangle  9: x=3349, y=1942, largeur=361, hauteur=191
+Rectangle 10: x=3316, y=1610, largeur=343, hauteur=304
+Rectangle 11: x=3265, y=1317, largeur=304, hauteur=338
+Rectangle 12: x=3085, y=1069, largeur=332, hauteur=349
+Rectangle 13: x=2854, y= 867, largeur=355, hauteur=360
+Rectangle 14: x=2662, y= 686, largeur=305, hauteur=372
+Rectangle 15: x=2409, y= 641, largeur=282, hauteur=355
+Rectangle 16: x=2116, y= 579, largeur=327, hauteur=366
+Rectangle 17: x=1812, y= 613, largeur=344, hauteur=299
+Rectangle 18: x=1548, y= 647, largeur=349, hauteur=321
+Rectangle 19: x=1311, y= 737, largeur=316, hauteur=343
+Rectangle 20: x=1069, y= 945, largeur=327, hauteur=299
+Rectangle 21: x= 867, y=1142, largeur=320, hauteur=333
+Rectangle 22: x= 731, y=1368, largeur=321, hauteur=321
+Rectangle 23: x= 602, y=1621, largeur=360, hauteur=326
+Rectangle 24: x= 619, y=1925, largeur=371, hauteur=214
+Rectangle 25: x= 579, y=2223, largeur=361, hauteur=287
+Rectangle 26: x= 669, y=2505, largeur=350, hauteur=287
+Rectangle 27: x= 816, y=2747, largeur=338, hauteur=259
+Rectangle 28: x=1002, y=2938, largeur=326, hauteur=344
+Rectangle 29: x=1232, y=3158, largeur=304, hauteur=310
+Rectangle 30: x=1503, y=3287, largeur=281, hauteur=288
+Rectangle 31: x=1773, y=3299, largeur=338, hauteur=529
+
+==================================================
+FORMAT COMPACT (pour copier-coller en Python):
+---------------------------------------------
+rectangles = [
+    {'x': 2060, 'y': 3366, 'width': 248, 'height': 355},
+    {'x': 2358, 'y': 3344, 'width': 259, 'height': 315},
+    {'x': 2617, 'y': 3282, 'width': 265, 'height': 309},
+    {'x': 2820, 'y': 3152, 'width': 304, 'height': 265},
+    {'x': 2967, 'y': 2944, 'width': 343, 'height': 287},
+    {'x': 3220, 'y': 2679, 'width': 298, 'height': 316},
+    {'x': 3316, 'y': 2409, 'width': 292, 'height': 327},
+    {'x': 3361, 'y': 2184, 'width': 337, 'height': 225},
+    {'x': 3349, 'y': 1942, 'width': 361, 'height': 191},
+    {'x': 3316, 'y': 1610, 'width': 343, 'height': 304},
+    {'x': 3265, 'y': 1317, 'width': 304, 'height': 338},
+    {'x': 3085, 'y': 1069, 'width': 332, 'height': 349},
+    {'x': 2854, 'y': 867, 'width': 355, 'height': 360},
+    {'x': 2662, 'y': 686, 'width': 305, 'height': 372},
+    {'x': 2409, 'y': 641, 'width': 282, 'height': 355},
+    {'x': 2116, 'y': 579, 'width': 327, 'height': 366},
+    {'x': 1812, 'y': 613, 'width': 344, 'height': 299},
+    {'x': 1548, 'y': 647, 'width': 349, 'height': 321},
+    {'x': 1311, 'y': 737, 'width': 316, 'height': 343},
+    {'x': 1069, 'y': 945, 'width': 327, 'height': 299},
+    {'x': 867, 'y': 1142, 'width': 320, 'height': 333},
+    {'x': 731, 'y': 1368, 'width': 321, 'height': 321},
+    {'x': 602, 'y': 1621, 'width': 360, 'height': 326},
+    {'x': 619, 'y': 1925, 'width': 371, 'height': 214},
+    {'x': 579, 'y': 2223, 'width': 361, 'height': 287},
+    {'x': 669, 'y': 2505, 'width': 350, 'height': 287},
+    {'x': 816, 'y': 2747, 'width': 338, 'height': 259},
+    {'x': 1002, 'y': 2938, 'width': 326, 'height': 344},
+    {'x': 1232, 'y': 3158, 'width': 304, 'height': 310},
+    {'x': 1503, 'y': 3287, 'width': 281, 'height': 288},
+    {'x': 1773, 'y': 3299, 'width': 338, 'height': 529}
+]
+

@@ -1,4 +1,4 @@
-from flask import Flask, render_template, request
+from flask import Flask, render_template, request, send_from_directory
 import os
 import cv2
 import numpy as np
@@ -7,7 +7,7 @@ from reportlab.lib.pagesizes import letter
 from reportlab.pdfgen import canvas
 from tensorflow.keras.models import load_model
 from flask import session
-
+from PIL import Image
 import io
 
 
@@ -22,6 +22,13 @@ IMG_SIZE = 28
 app.secret_key = 'supersecret'
 
 app.config['UPLOAD_FOLDER'] = UPLOAD_FOLDER
+
+UPLOAD_FOLDER = os.path.join(os.getcwd(), 'uploads')
+app.config['UPLOAD_FOLDER'] = UPLOAD_FOLDER
+@app.route('/uploads/<path:filename>')
+def upload_file(filename):
+    return send_from_directory(app.config['UPLOAD_FOLDER'], filename)
+
 
 # === Chargement du modèle ===
 model = load_model(MODEL_PATH)
@@ -80,6 +87,18 @@ def generate_pdf(results):
     buffer.seek(0)
     return buffer
 
+
+def extraire_Couleur_conforme(image_path): 
+    # Ouvrir l'image et convertir en RGB
+    img = Image.open(image_path).convert("RGB")
+    # Récupérer les pixels et supprimer les doublons
+    unique_colors = set(img.getdata())
+    print(f"Nombre de couleurs uniques dans l'image : {len(unique_colors)}")
+    # Afficher chaque couleur unique
+    print("Couleurs RGB uniques dans l'image :")
+    return unique_colors
+
+
 # === Routes ===
 @app.route('/')
 def index():
@@ -109,7 +128,11 @@ def predict():
         })
 
     session['results'] = results
-    return render_template('result.html', results=results)
+    return render_template(
+        'result.html',
+        results=results,
+        input_image=file.filename  # 🟢 Passe le nom de l'image ici
+    )
 
 @app.route('/download')
 def download_report():

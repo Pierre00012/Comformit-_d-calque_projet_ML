@@ -6,6 +6,13 @@ dataset_binarized/
 roi_images/
 dataset/
 extracted_rois/
+dataset_chiffres_10_31_final/
+dataset_chiffres_1_31_final/
+dataset_augmented/
+uploads/
+test/
+test_binarized/
+
 __pycache__/
 # ignorer les fichiers csv 
 *.csv
