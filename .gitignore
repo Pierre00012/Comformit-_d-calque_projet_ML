@@ -4,7 +4,6 @@
 data/
 dataset_binarized/
 roi_images/
-dataset/
 extracted_rois/
 dataset_chiffres_10_31_final/
 dataset_chiffres_1_31_final/
