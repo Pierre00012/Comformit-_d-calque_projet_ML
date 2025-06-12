@@ -2,6 +2,7 @@
 .venv/
 # Ignorer le dossier contenant des fichiers de données
 #data/
+data/archive/
 dataset_binarized/
 roi_images/
 extracted_rois/
