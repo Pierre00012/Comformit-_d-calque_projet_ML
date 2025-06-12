@@ -16,5 +16,6 @@ test_binarized/
 __pycache__/
 # ignorer les fichiers csv 
 *.csv
+*.pdf
 
 
